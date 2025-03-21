@@ -130,6 +130,114 @@ class Ui_Widget(object):
         # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
         self.label_study_room_l2.hide()
 
+        # Label cho led_living1
+        self.label_led_living1 = QLabel(self.giaodien)
+        self.label_led_living1.setObjectName(u"label_led_living1")
+        self.label_led_living1.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_living1.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_living1.png"))  # Thay đường dẫn
+        self.label_led_living1.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_living1.hide()
+
+        # Label cho led_living2
+        self.label_led_living2 = QLabel(self.giaodien)
+        self.label_led_living2.setObjectName(u"label_led_living2")
+        self.label_led_living2.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_living2.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_living2.png"))  # Thay đường dẫn
+        self.label_led_living2.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_living2.hide()
+
+        # Label cho led_led_living3
+        self.label_led_living3 = QLabel(self.giaodien)
+        self.label_led_living3.setObjectName(u"label_led_living3")
+        self.label_led_living3.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_living3.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_living3.png"))  # Thay đường dẫn
+        self.label_led_living3.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_living3.hide()
+
+        # Label cho led_kitchen1
+        self.label_led_kitchen1 = QLabel(self.giaodien)
+        self.label_led_kitchen1.setObjectName(u"label_led_kitchen1")
+        self.label_led_kitchen1.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_kitchen1.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_kitchen1.png"))  # Thay đường dẫn
+        self.label_led_kitchen1.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_kitchen1.hide()
+
+        # Label cho led_kitchen2
+        self.label_led_kitchen2 = QLabel(self.giaodien)
+        self.label_led_kitchen2.setObjectName(u"label_led_kitchen2")
+        self.label_led_kitchen2.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_kitchen2.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_kitchen2.png"))  # Thay đường dẫn
+        self.label_led_kitchen2.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_kitchen2.hide()
+
+        # Label cho led_kitchen3
+        self.label_led_kitchen3 = QLabel(self.giaodien)
+        self.label_led_kitchen3.setObjectName(u"label_led_kitchen3")
+        self.label_led_kitchen3.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_kitchen3.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_kitchen3.png"))  # Thay đường dẫn
+        self.label_led_kitchen3.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_kitchen3.hide()
+
+        # Label cho led_bed1_1
+        self.label_led_bed1_1= QLabel(self.giaodien)
+        self.label_led_bed1_1.setObjectName(u"label_led_bed1_1")
+        self.label_led_bed1_1.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_bed1_1.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed1.1.png"))  # Thay đường dẫn
+        self.label_led_bed1_1.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_bed1_1.hide()
+
+        # Label cho led_bed1_2
+        self.label_led_bed1_2= QLabel(self.giaodien)
+        self.label_led_bed1_2.setObjectName(u"label_led_bed1_2")
+        self.label_led_bed1_2.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_bed1_2.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed1.2.png"))  # Thay đường dẫn
+        self.label_led_bed1_2.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_bed1_2.hide()
+
+        # Label cho led_bed1_3
+        self.label_led_bed1_3= QLabel(self.giaodien)
+        self.label_led_bed1_3.setObjectName(u"label_led_bed1_3")
+        self.label_led_bed1_3.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_bed1_3.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed1.3.png"))  # Thay đường dẫn
+        self.label_led_bed1_3.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_bed1_3.hide()
+
+        # Label cho led_bed2_1
+        self.label_led_bed2_1= QLabel(self.giaodien)
+        self.label_led_bed2_1.setObjectName(u"label_led_bed2_1")
+        self.label_led_bed2_1.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_bed2_1.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed2.1.png"))  # Thay đường dẫn
+        self.label_led_bed2_1.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_bed2_1.hide()
+
+        # Label cho led_bed2_2
+        self.label_led_bed2_2= QLabel(self.giaodien)
+        self.label_led_bed2_2.setObjectName(u"label_led_bed2_2")
+        self.label_led_bed2_2.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_bed2_2.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed2.2.png"))  # Thay đường dẫn
+        self.label_led_bed2_2.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_bed2_2.hide()
+
+        # Label cho led_bed2_3
+        self.label_led_bed2_3= QLabel(self.giaodien)
+        self.label_led_bed2_3.setObjectName(u"label_led_bed2_3")
+        self.label_led_bed2_3.setGeometry(QRect(10, 41, 981, 741))
+        self.label_led_bed2_3.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed2.3.png"))  # Thay đường dẫn
+        self.label_led_bed2_3.setScaledContents(True)
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        self.label_led_bed2_3.hide()
+
         self.living_room = QPushButton(self.giaodien)
         self.living_room.setObjectName(u"living_room")
         self.living_room.setGeometry(QRect(280, 480, 251, 201))
@@ -508,7 +616,9 @@ class Ui_Widget(object):
         #self.Dimmer.valueChanged.connect(self.updateSliderColor)
         self.update_lcd(0)
         self.stream_thread = None
-
+        self.Dimmer.setMinimum(0)
+        self.Dimmer.setMaximum(100)
+        self.Dimmer.valueChanged.connect(self.check_dimmer)
         # Kết nối sự kiện nút nhấn để bắt đầu phát video
         #self.cam_0.clicked.connect(self.start_stream)
     # setupUi
@@ -615,6 +725,75 @@ class Ui_Widget(object):
         else:
             self.label_wc.hide()
             self.set_green_style_l1()
+    def led_living(self):
+        if (self.Dimmer.value() ==0):
+            self.label_led_living1.hide()
+            self.label_led_living2.hide()
+            self.label_led_living3.hide()
+        if (1<=self.Dimmer.value() <=50):
+            self.label_led_living1.show()
+            self.label_led_living2.hide()
+            self.label_led_living3.hide()
+        if (70>=self.Dimmer.value() >50):
+            self.label_led_living1.hide()
+            self.label_led_living2.show()
+            self.label_led_living3.hide()
+        if (100>=self.Dimmer.value() >70):
+            self.label_led_living1.hide()
+            self.label_led_living2.hide()
+            self.label_led_living3.show()
+        
+    def led_kitchen(self):
+        if (self.Dimmer.value() ==0):
+            self.label_led_kitchen1.hide()
+            self.label_led_kitchen2.hide()
+            self.label_led_kitchen3.hide()
+        if (1<=self.Dimmer.value() <=50):
+            self.label_led_kitchen1.show()
+            self.label_led_kitchen2.hide()
+            self.label_led_kitchen3.hide()
+        if (70>=self.Dimmer.value() >50):
+            self.label_led_kitchen1.hide()
+            self.label_led_kitchen2.show()
+            self.label_led_kitchen3.hide()
+        if (100>=self.Dimmer.value() >70):
+            self.label_led_kitchen1.hide()
+            self.label_led_kitchen2.hide()
+            self.label_led_kitchen3.show()
+    def led_bed1(self):
+        if (self.Dimmer.value() ==0):
+            self.label_led_bed1_1.hide()
+            self.label_led_bed1_2.hide()
+            self.label_led_bed1_3.hide()
+        if (1<=self.Dimmer.value() <=50):
+            self.label_led_bed1_1.show()
+            self.label_led_bed1_2.hide()
+            self.label_led_bed1_3.hide()
+        if (70>=self.Dimmer.value() >50):
+            self.label_led_bed1_1.hide()
+            self.label_led_bed1_2.show()
+            self.label_led_bed1_3.hide()
+        if (100>=self.Dimmer.value() >70):
+            self.label_led_bed1_1.hide()
+            self.label_led_bed1_2.hide()
+            self.label_led_bed1_3.show()
+    def led_bed2(self):
+        if (self.Dimmer.value() ==0):
+            self.label_led_bed2_1.hide()
+            self.label_led_bed2_2.hide()
+            self.label_led_bed2_3.hide()
+        if (1<=self.Dimmer.value() <=50):
+            self.label_led_bed2_1.show()
+            self.label_led_bed2_2.hide()
+            self.label_led_bed2_3.hide()
+        if (70>=self.Dimmer.value() >50):
+            self.label_led_bed2_1.hide()
+            self.label_led_bed2_2.show()
+            self.label_led_bed2_3.hide()
+        if (100>=self.Dimmer.value() >70):
+            self.label_led_bed2_1.hide()
+            self.label_led_bed2_2.hide()
+            self.label_led_bed2_3.show()
     # def flag_livingroom (self):
     #     self.flag = 1
     def check_bt_0(self):
@@ -640,6 +819,17 @@ class Ui_Widget(object):
             self.toggle_wc()
         if(self.flag == 5):
             self.toggle_study_room_l2()
+            
+    def check_dimmer(self):
+        if(self.flag==1):
+            self.led_living()
+        if(self.flag==2):
+            self.led_bed1()
+        if(self.flag==3):
+            self.led_kitchen()
+        if(self.flag==5):
+            self.led_bed2()
+            
     def update_lcd(self, value):
         brightness_levels = [0,25,50,75,100]
         percentage = brightness_levels[value]
