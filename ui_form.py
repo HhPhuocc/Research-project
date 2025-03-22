@@ -516,17 +516,17 @@ class Ui_Widget(object):
         self.cam_0 = QPushButton(self.groupBox_12)
         self.cam_0.setObjectName(u"cam_0")
         icon1 = QIcon()
-        icon1.addFile(u"../../../../UI/giao_dien/User/ADMIN/img/cctv-camera.png", QSize(), QIcon.Mode.Normal,
+        icon1.addFile(u"D:/Intern/filehoanchinh/Research-project/fileanhsua/camera-g3.png", QSize(), QIcon.Mode.Normal,
                       QIcon.State.Off)
         self.cam_0.setIcon(icon1)
-        self.cam_0.setIconSize(QSize(50, 50))
+        self.cam_0.setIconSize(QSize(80, 80))
 
         self.gridLayout_2.addWidget(self.cam_0, 0, 1, 1, 1)
 
         self.cam_1 = QPushButton(self.groupBox_12)
         self.cam_1.setObjectName(u"cam_1")
         self.cam_1.setIcon(icon1)
-        self.cam_1.setIconSize(QSize(50, 50))
+        self.cam_1.setIconSize(QSize(80, 80))
 
         self.gridLayout_2.addWidget(self.cam_1, 1, 1, 1, 1)
 
@@ -547,14 +547,14 @@ class Ui_Widget(object):
         self.cam_2 = QPushButton(self.groupBox_14)
         self.cam_2.setObjectName(u"cam_2")
         self.cam_2.setIcon(icon1)
-        self.cam_2.setIconSize(QSize(50, 50))
+        self.cam_2.setIconSize(QSize(80, 80))
 
         self.gridLayout_5.addWidget(self.cam_2, 0, 0, 1, 1)
 
         self.cam_3 = QPushButton(self.groupBox_14)
         self.cam_3.setObjectName(u"cam_3")
         self.cam_3.setIcon(icon1)
-        self.cam_3.setIconSize(QSize(50, 50))
+        self.cam_3.setIconSize(QSize(80, 80))
 
         self.gridLayout_5.addWidget(self.cam_3, 1, 0, 1, 1)
 
@@ -577,14 +577,14 @@ class Ui_Widget(object):
         self.cam_4 = QPushButton(self.groupBox_16)
         self.cam_4.setObjectName(u"cam_4")
         self.cam_4.setIcon(icon1)
-        self.cam_4.setIconSize(QSize(50, 50))
+        self.cam_4.setIconSize(QSize(80, 80))
 
         self.gridLayout_6.addWidget(self.cam_4, 0, 0, 1, 1)
 
         self.cam_5 = QPushButton(self.groupBox_16)
         self.cam_5.setObjectName(u"cam_5")
         self.cam_5.setIcon(icon1)
-        self.cam_5.setIconSize(QSize(50, 50))
+        self.cam_5.setIconSize(QSize(80, 80))
 
         self.gridLayout_6.addWidget(self.cam_5, 1, 0, 1, 1)
 
@@ -648,12 +648,7 @@ class Ui_Widget(object):
         self.Dimmer.valueChanged.connect(self.update_lcd)
         self.Dimmer.valueChanged.connect(self.check_dimmer)
         #self.Dimmer.valueChanged.connect(self.lcd_2.display)
-        
         # self.Dimmer.valueChanged.connect(self.updateSliderColor)
-       
-        self.stream_thread = None
-        
-
     # setupUi
 
     def retranslateUi(self, Widget):
@@ -824,97 +819,103 @@ class Ui_Widget(object):
             self.tt_bt0_wc = False
             self.control_switch1(DEVICE_ID,RESOURCE_ID1,"0")
     def led_living(self):
-        print('per2',self.percentage)
         if (self.percentage ==0):
             self.label_led_living1.hide()
             self.label_led_living2.hide()
             self.label_led_living3.hide()
+            self.dim_living=0
         if (self.percentage ==25):
             self.label_led_living1.show()
             self.label_led_living2.hide()
             self.label_led_living3.hide()
+            self.dim_living=1
         if (self.percentage ==50):
             self.label_led_living1.hide()
             self.label_led_living2.show()
             self.label_led_living3.hide()
+            self.dim_living=2
+        if (self.percentage ==75):
+            self.dim_living=3
         if (self.percentage ==100):
             self.label_led_living1.hide()
             self.label_led_living2.hide()
             self.label_led_living3.show()
-    # def led_living(self):
-    #     if (self.Dimmer.value() ==0):
-    #         self.label_led_living1.hide()
-    #         self.label_led_living2.hide()
-    #         self.label_led_living3.hide()
-    #     if (1<=self.Dimmer.value() <=50):
-    #         self.label_led_living1.show()
-    #         self.label_led_living2.hide()
-    #         self.label_led_living3.hide()
-    #     if (70>=self.Dimmer.value() >50):
-    #         self.label_led_living1.hide()
-    #         self.label_led_living2.show()
-    #         self.label_led_living3.hide()
-    #     if (100>=self.Dimmer.value() >70):
-    #         self.label_led_living1.hide()
-    #         self.label_led_living2.hide()
-    #         self.label_led_living3.show()
+            self.dim_living=4
+        print("dim",self.dim_living)
     def led_kitchen(self):
         if (self.percentage ==0):
             self.label_led_kitchen1.hide()
             self.label_led_kitchen2.hide()
             self.label_led_kitchen3.hide()
+            self.dim_kitchen=0
         if (self.percentage ==25):
             self.label_led_kitchen1.show()
             self.label_led_kitchen2.hide()
             self.label_led_kitchen3.hide()
+            self.dim_kitchen=1
         if (self.percentage ==50):
             self.label_led_kitchen1.hide()
             self.label_led_kitchen2.show()
             self.label_led_kitchen3.hide()
+            self.dim_kitchen=2
+        if (self.percentage ==75):
+            self.dim_kiychen=3
         if (self.percentage ==100):
             self.label_led_kitchen1.hide()
             self.label_led_kitchen2.hide()
             self.label_led_kitchen3.show()
+            self.dim_kitchen=4
     def led_bed1(self):
         if (self.percentage ==0):
             self.label_led_bed1_1.hide()
             self.label_led_bed1_2.hide()
             self.label_led_bed1_3.hide()
+            self.dim_bed1=0
         if (self.percentage ==25):
             self.label_led_bed1_1.show()
             self.label_led_bed1_2.hide()
             self.label_led_bed1_3.hide()
+            self.dim_bed1=1
         if (self.percentage ==50):
             self.label_led_bed1_1.hide()
             self.label_led_bed1_2.show()
             self.label_led_bed1_3.hide()
+            self.dim_bed1=2
+        if (self.percentage ==75):
+            self.dim_bed1=3
         if (self.percentage ==100):
             self.label_led_bed1_1.hide()
             self.label_led_bed1_2.hide()
             self.label_led_bed1_3.show()
+            self.dim_bed1=4
     def led_bed2(self):
         if (self.percentage ==0):
             self.label_led_bed2_1.hide()
             self.label_led_bed2_2.hide()
             self.label_led_bed2_3.hide()
+            self.dim_bed2=0
         if (self.percentage ==25):
             self.label_led_bed2_1.show()
             self.label_led_bed2_2.hide()
             self.label_led_bed2_3.hide()
+            self.dim_bed2=1
         if (self.percentage ==50):
             self.label_led_bed2_1.hide()
             self.label_led_bed2_2.show()
             self.label_led_bed2_3.hide()
+            self.dim_bed2=2
+        if (self.percentage ==75):
+            self.dim_bed2=3
         if (self.percentage ==100):
             self.label_led_bed2_1.hide()
             self.label_led_bed2_2.hide()
             self.label_led_bed2_3.show()
+            self.dim_bed2=4
     def update_lcd(self, value):
-        brightness_levels = [0, 25, 50, 75, 100]
-        self.percentage = brightness_levels[value]
+        self.brightness_levels = [0,25, 50, 75, 100]
+        self.percentage = self.brightness_levels[value]
         self.lcd_2.display(self.percentage) 
-        print("value",value)
-        print("per",self.percentage)
+        
     # def flag_livingroom (self):
     #     self.flag = 1
     def check_bt_0(self):
@@ -947,7 +948,7 @@ class Ui_Widget(object):
             self.led_bed1()
         if(self.flag==3):
             self.led_kitchen()
-        if(self.flag==4):
+        if(self.flag==5):
             self.led_bed2()
         
     def check_camera0(self):
@@ -959,44 +960,6 @@ class Ui_Widget(object):
             self.camera0()
         if(self.flag == 4):
             self.camera0()
-    
-    # def updateSliderColor(self, value):
-    #     # Tính toán màu sắc cho phần đã trượt
-    #     # Tạo hiệu ứng sáng tối cho các vùng
-    #     color = f"rgb({value * 85}, {255 - value * 85}, 255)"  # Dựa trên mức trượt
-    #     self.Dimmer.setStyleSheet(f"""
-    #         QSlider::groove:horizontal {{
-    #             border: 1px solid #bbb;
-    #             background: #f0f0f0;
-    #             height: 15px;
-    #             border-radius: 7px;
-    #         }}
-    #         QSlider::sub-page:horizontal {{
-    #             background: {color};  /* Màu thay đổi theo giá trị */
-    #             border-radius: 7px;
-    #         }}
-    #         QSlider::add-page:horizontal {{
-    #             background: #ccc;
-    #             border-radius: 7px;
-    #         }}
-    #         QSlider::handle:horizontal {{
-    #             background: #007bff;
-    #             border: 2px solid #0056b3;
-    #             width: 20px;
-    #             height: 20px;
-    #             margin: -8px 0;
-    #             border-radius: 10px;
-    #         }}
-    #         QSlider::handle:horizontal:hover {{
-    #             background: #0056b3;
-    #         }}
-    #         QSlider::tick-mark:horizontal {{
-    #             background: #000;
-    #             width: 2px;
-    #             height: 10px;
-    #         }}
-    #     """)
-
     def set_green_style_l1(self):
         """Thiết lập stylesheet cho màu xanh lục"""
         self.sw_0.setStyleSheet("""
@@ -1071,6 +1034,7 @@ class Ui_Widget(object):
 
     def on_living_room_click(self):
         self.flag = 1
+        self.Dimmer.setValue(self.dim_living)
         if self.tt_bt0_living:
             self.set_red_style_l2()
         else:
@@ -1082,6 +1046,7 @@ class Ui_Widget(object):
 
     def on_bed_room_click(self):
         self.flag = 2
+        self.Dimmer.setValue(self.dim_bed1)
         if self.tt_bt0_bed:
             self.set_red_style_l2()
         else:
@@ -1093,6 +1058,7 @@ class Ui_Widget(object):
 
     def on_kitchen_click(self):
         self.flag = 3
+        self.Dimmer.setValue(self.dim_kitchen)
         if self.tt_bt0_kitchen:
             self.set_red_style_l2()
         else:
@@ -1115,6 +1081,7 @@ class Ui_Widget(object):
 
     def on_study_room_click(self):
         self.flag = 5
+        self.Dimmer.setValue(self.dim_bed2)
         if self.tt_bt0_study:
             self.set_red_style_l2()
         else:
