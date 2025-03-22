@@ -9,16 +9,17 @@
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect, QThread,Signal,
-    QSize, QTime, QUrl, Qt)
+                            QMetaObject, QObject, QPoint, QRect, QThread, Signal,
+                            QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
+                           QFont, QFontDatabase, QGradient, QIcon,
+                           QImage, QKeySequence, QLinearGradient, QPainter,
+                           QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QGroupBox,
-    QHBoxLayout, QLCDNumber, QLabel, QPushButton,
-    QSizePolicy, QSlider, QVBoxLayout, QWidget)
+                               QHBoxLayout, QLCDNumber, QLabel, QPushButton,
+                               QSizePolicy, QSlider, QVBoxLayout, QWidget)
 import cv2
+
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
@@ -38,13 +39,13 @@ class Ui_Widget(object):
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(10, 41, 981, 741))
         self.label.setStyleSheet(u" QPushButton {\n"
-"        border: none;  \n"
-"        background-color: transparent;  \n"
-"        padding: 10px; \n"
-"    }\n"
-"QPushButton:pressed {\n"
-"        background-color: rgba(0, 0, 0, 100);  \n"
-"    }")
+                                 "        border: none;  \n"
+                                 "        background-color: transparent;  \n"
+                                 "        padding: 10px; \n"
+                                 "    }\n"
+                                 "QPushButton:pressed {\n"
+                                 "        background-color: rgba(0, 0, 0, 100);  \n"
+                                 "    }")
         self.label.setPixmap(QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d.png"))
         self.label.setScaledContents(True)
 
@@ -52,16 +53,18 @@ class Ui_Widget(object):
         self.label_living_l1 = QLabel(self.giaodien)
         self.label_living_l1.setObjectName(u"label_living_l1")
         self.label_living_l1.setGeometry(QRect(10, 41, 981, 741))
-        self.label_living_l1.setPixmap(QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_living1.png"))  # Thay đường dẫn
+        self.label_living_l1.setPixmap(
+            QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_living1.png"))  # Thay đường dẫn
         self.label_living_l1.setScaledContents(True)
-        #self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
+        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
         self.label_living_l1.hide()
 
         # Label cho living_room_l2
         self.label_living_l2 = QLabel(self.giaodien)
         self.label_living_l1.setObjectName(u"label_living_l2")
         self.label_living_l2.setGeometry(QRect(10, 41, 981, 741))
-        self.label_living_l2.setPixmap(QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_living2.png"))  # Thay đường dẫn
+        self.label_living_l2.setPixmap(
+            QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_living2.png"))  # Thay đường dẫn
         self.label_living_l2.setScaledContents(True)
         # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
         self.label_living_l2.hide()
@@ -84,12 +87,12 @@ class Ui_Widget(object):
         # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
         self.label_bed_l2.hide()
 
-
         # Label cho kitchen_l1
         self.label_kitchen_l1 = QLabel(self.giaodien)
         self.label_kitchen_l1.setObjectName(u"label_kitchen_l1")
         self.label_kitchen_l1.setGeometry(QRect(10, 41, 981, 741))
-        self.label_kitchen_l1.setPixmap(QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_kitchen1.png"))  # Thay đường dẫn
+        self.label_kitchen_l1.setPixmap(
+            QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_kitchen1.png"))  # Thay đường dẫn
         self.label_kitchen_l1.setScaledContents(True)
         # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
         self.label_kitchen_l1.hide()
@@ -98,7 +101,8 @@ class Ui_Widget(object):
         self.label_kitchen_l2 = QLabel(self.giaodien)
         self.label_kitchen_l2.setObjectName(u"label_kitchen_l2")
         self.label_kitchen_l2.setGeometry(QRect(10, 41, 981, 741))
-        self.label_kitchen_l2.setPixmap(QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_kitchen2.png"))  # Thay đường dẫn
+        self.label_kitchen_l2.setPixmap(
+            QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_kitchen2.png"))  # Thay đường dẫn
         self.label_kitchen_l2.setScaledContents(True)
         # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
         self.label_kitchen_l2.hide()
@@ -116,7 +120,8 @@ class Ui_Widget(object):
         self.label_study_room_l1 = QLabel(self.giaodien)
         self.label_study_room_l1.setObjectName(u"label_study_room_l1")
         self.label_study_room_l1.setGeometry(QRect(10, 41, 981, 741))
-        self.label_study_room_l1.setPixmap(QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_bed2_1.png"))  # Thay đường dẫn
+        self.label_study_room_l1.setPixmap(
+            QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_bed2_1.png"))  # Thay đường dẫn
         self.label_study_room_l1.setScaledContents(True)
         # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
         self.label_study_room_l1.hide()
@@ -125,175 +130,67 @@ class Ui_Widget(object):
         self.label_study_room_l2 = QLabel(self.giaodien)
         self.label_study_room_l2.setObjectName(u"label_study_room_l2")
         self.label_study_room_l2.setGeometry(QRect(10, 41, 981, 741))
-        self.label_study_room_l2.setPixmap(QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_bed2_2.png"))  # Thay đường dẫn
+        self.label_study_room_l2.setPixmap(
+            QPixmap(u"../../../../UI/giao_dien/User/ADMIN/img/3d_bed2_2.png"))  # Thay đường dẫn
         self.label_study_room_l2.setScaledContents(True)
         # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
         self.label_study_room_l2.hide()
-
-        # Label cho led_living1
-        self.label_led_living1 = QLabel(self.giaodien)
-        self.label_led_living1.setObjectName(u"label_led_living1")
-        self.label_led_living1.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_living1.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_living1.png"))  # Thay đường dẫn
-        self.label_led_living1.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_living1.hide()
-
-        # Label cho led_living2
-        self.label_led_living2 = QLabel(self.giaodien)
-        self.label_led_living2.setObjectName(u"label_led_living2")
-        self.label_led_living2.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_living2.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_living2.png"))  # Thay đường dẫn
-        self.label_led_living2.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_living2.hide()
-
-        # Label cho led_led_living3
-        self.label_led_living3 = QLabel(self.giaodien)
-        self.label_led_living3.setObjectName(u"label_led_living3")
-        self.label_led_living3.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_living3.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_living3.png"))  # Thay đường dẫn
-        self.label_led_living3.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_living3.hide()
-
-        # Label cho led_kitchen1
-        self.label_led_kitchen1 = QLabel(self.giaodien)
-        self.label_led_kitchen1.setObjectName(u"label_led_kitchen1")
-        self.label_led_kitchen1.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_kitchen1.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_kitchen1.png"))  # Thay đường dẫn
-        self.label_led_kitchen1.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_kitchen1.hide()
-
-        # Label cho led_kitchen2
-        self.label_led_kitchen2 = QLabel(self.giaodien)
-        self.label_led_kitchen2.setObjectName(u"label_led_kitchen2")
-        self.label_led_kitchen2.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_kitchen2.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_kitchen2.png"))  # Thay đường dẫn
-        self.label_led_kitchen2.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_kitchen2.hide()
-
-        # Label cho led_kitchen3
-        self.label_led_kitchen3 = QLabel(self.giaodien)
-        self.label_led_kitchen3.setObjectName(u"label_led_kitchen3")
-        self.label_led_kitchen3.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_kitchen3.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_kitchen3.png"))  # Thay đường dẫn
-        self.label_led_kitchen3.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_kitchen3.hide()
-
-        # Label cho led_bed1_1
-        self.label_led_bed1_1= QLabel(self.giaodien)
-        self.label_led_bed1_1.setObjectName(u"label_led_bed1_1")
-        self.label_led_bed1_1.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_bed1_1.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed1.1.png"))  # Thay đường dẫn
-        self.label_led_bed1_1.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_bed1_1.hide()
-
-        # Label cho led_bed1_2
-        self.label_led_bed1_2= QLabel(self.giaodien)
-        self.label_led_bed1_2.setObjectName(u"label_led_bed1_2")
-        self.label_led_bed1_2.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_bed1_2.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed1.2.png"))  # Thay đường dẫn
-        self.label_led_bed1_2.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_bed1_2.hide()
-
-        # Label cho led_bed1_3
-        self.label_led_bed1_3= QLabel(self.giaodien)
-        self.label_led_bed1_3.setObjectName(u"label_led_bed1_3")
-        self.label_led_bed1_3.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_bed1_3.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed1.3.png"))  # Thay đường dẫn
-        self.label_led_bed1_3.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_bed1_3.hide()
-
-        # Label cho led_bed2_1
-        self.label_led_bed2_1= QLabel(self.giaodien)
-        self.label_led_bed2_1.setObjectName(u"label_led_bed2_1")
-        self.label_led_bed2_1.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_bed2_1.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed2.1.png"))  # Thay đường dẫn
-        self.label_led_bed2_1.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_bed2_1.hide()
-
-        # Label cho led_bed2_2
-        self.label_led_bed2_2= QLabel(self.giaodien)
-        self.label_led_bed2_2.setObjectName(u"label_led_bed2_2")
-        self.label_led_bed2_2.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_bed2_2.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed2.2.png"))  # Thay đường dẫn
-        self.label_led_bed2_2.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_bed2_2.hide()
-
-        # Label cho led_bed2_3
-        self.label_led_bed2_3= QLabel(self.giaodien)
-        self.label_led_bed2_3.setObjectName(u"label_led_bed2_3")
-        self.label_led_bed2_3.setGeometry(QRect(10, 41, 981, 741))
-        self.label_led_bed2_3.setPixmap(QPixmap(u"D:/Intern/fileanhsua/3d_led_bed2.3.png"))  # Thay đường dẫn
-        self.label_led_bed2_3.setScaledContents(True)
-        # self.label_living.setStyleSheet("background-color: rgba(0, 0, 0, 0.5);")
-        self.label_led_bed2_3.hide()
 
         self.living_room = QPushButton(self.giaodien)
         self.living_room.setObjectName(u"living_room")
         self.living_room.setGeometry(QRect(280, 480, 251, 201))
         self.living_room.setStyleSheet(u" QPushButton {\n"
-"        border: none;  \n"
-"        background-color: transparent;  \n"
-"        border-radius: 50px;            \n"
-        
-"        padding: 10px; \n"
-"    }\n"
-)
+                                       "        border: none;  \n"
+                                       "        background-color: transparent;  \n"
+                                       "        border-radius: 50px;            \n"
+
+                                       "        padding: 10px; \n"
+                                       "    }\n"
+                                       )
         self.kitchen = QPushButton(self.giaodien)
         self.kitchen.setObjectName(u"kitchen")
         self.kitchen.setGeometry(QRect(532, 320, 281, 151))
         self.kitchen.setStyleSheet(u" QPushButton {\n"
-"        border: none;  \n"
-"        background-color: transparent;  \n"
-"        border-radius: 50px;            \n"
-                                   
-"        padding: 10px; \n"
-"    }\n"
-)
+                                   "        border: none;  \n"
+                                   "        background-color: transparent;  \n"
+                                   "        border-radius: 50px;            \n"
+
+                                   "        padding: 10px; \n"
+                                   "    }\n"
+                                   )
         self.bed_room = QPushButton(self.giaodien)
         self.bed_room.setObjectName(u"bed_room")
         self.bed_room.setGeometry(QRect(200, 360, 150, 100))
         self.bed_room.setStyleSheet(u" QPushButton {\n"
-"        border: none;  \n"
-"        background-color: transparent;  \n"
-"        border-radius: 50px;            \n"
-                                   
-"        padding: 10px; \n"
-"    }\n"
-"QPushButton:pressed {\n"
-)
+                                    "        border: none;  \n"
+                                    "        background-color: transparent;  \n"
+                                    "        border-radius: 50px;            \n"
+
+                                    "        padding: 10px; \n"
+                                    "    }\n"
+                                    "QPushButton:pressed {\n"
+                                    )
         self.wc = QPushButton(self.giaodien)
         self.wc.setObjectName(u"wc")
         self.wc.setGeometry(QRect(345, 320, 100, 100))
         self.wc.setStyleSheet(u" QPushButton {\n"
-"        border: none;  \n"
-"        background-color: transparent;  \n"
-"        border-radius: 50px;            \n"
-                
-"        padding: 10px; \n"
-"    }\n"
-)
+                              "        border: none;  \n"
+                              "        background-color: transparent;  \n"
+                              "        border-radius: 50px;            \n"
+                              "        padding: 10px; \n"
+                              "    }\n"
+                              )
         self.study_room = QPushButton(self.giaodien)
         self.study_room.setObjectName(u"study_room")
         self.study_room.setGeometry(QRect(430, 260, 110, 110))
         self.study_room.setStyleSheet(u" QPushButton {\n"
-"        border: none;  \n"
-"        background-color: transparent;  \n"
-"        border-radius: 50px;            \n"
+                                      "        border: none;  \n"
+                                      "        background-color: transparent;  \n"
+                                      "        border-radius: 50px;            \n"
 
-                              "        padding: 10px; \n"
-                              "    }\n"
-                              )
+                                      "        padding: 10px; \n"
+                                      "    }\n"
+                                      )
 
         self.horizontalLayout.addWidget(self.giaodien)
 
@@ -347,7 +244,6 @@ class Ui_Widget(object):
 
         self.horizontalLayout_2.addWidget(self.lcd_0)
 
-
         self.verticalLayout_2.addWidget(self.groupBox_8)
 
         self.groupBox_9 = QGroupBox(self.control_led)
@@ -386,14 +282,12 @@ class Ui_Widget(object):
 
         self.horizontalLayout_3.addWidget(self.lcd_1)
 
-
         self.verticalLayout_2.addWidget(self.groupBox_9)
 
         self.groupBox_3 = QGroupBox(self.control_led)
         self.groupBox_3.setObjectName(u"groupBox_3")
         self.horizontalLayout_5 = QHBoxLayout(self.groupBox_3)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-
 
         self.Dimmer = QSlider(Qt.Horizontal)
         self.Dimmer.setRange(0, 4)
@@ -469,7 +363,6 @@ class Ui_Widget(object):
 
         self.verticalLayout_2.addWidget(self.groupBox_3)
 
-
         self.verticalLayout.addWidget(self.control_led)
 
         self.camera = QGroupBox(self.control)
@@ -490,7 +383,8 @@ class Ui_Widget(object):
         self.cam_0 = QPushButton(self.groupBox_12)
         self.cam_0.setObjectName(u"cam_0")
         icon1 = QIcon()
-        icon1.addFile(u"../../../../UI/giao_dien/User/ADMIN/img/cctv-camera.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon1.addFile(u"../../../../UI/giao_dien/User/ADMIN/img/cctv-camera.png", QSize(), QIcon.Mode.Normal,
+                      QIcon.State.Off)
         self.cam_0.setIcon(icon1)
         self.cam_0.setIconSize(QSize(50, 50))
 
@@ -503,9 +397,7 @@ class Ui_Widget(object):
 
         self.gridLayout_2.addWidget(self.cam_1, 1, 1, 1, 1)
 
-
         self.verticalLayout_4.addWidget(self.groupBox_12)
-
 
         self.horizontalLayout_4.addWidget(self.groupBox_6)
 
@@ -533,9 +425,7 @@ class Ui_Widget(object):
 
         self.gridLayout_5.addWidget(self.cam_3, 1, 0, 1, 1)
 
-
         self.verticalLayout_5.addWidget(self.groupBox_14)
-
 
         self.horizontalLayout_4.addWidget(self.groupBox_7)
 
@@ -565,12 +455,9 @@ class Ui_Widget(object):
 
         self.gridLayout_6.addWidget(self.cam_5, 1, 0, 1, 1)
 
-
         self.verticalLayout_6.addWidget(self.groupBox_16)
 
-
         self.horizontalLayout_4.addWidget(self.groupBox_10)
-
 
         self.verticalLayout.addWidget(self.camera)
 
@@ -579,22 +466,17 @@ class Ui_Widget(object):
 
         self.verticalLayout.addWidget(self.groupBox_5)
 
-
         self.horizontalLayout.addWidget(self.control)
-
 
         self.retranslateUi(Widget)
 
         QMetaObject.connectSlotsByName(Widget)
 
-
         self.living_visible_l1 = False
         self.living_visible_l2 = False
 
-
         self.bed_visible_l1 = False
         self.bed_visible_l2 = False
-
 
         self.kitchen_visible_l1 = False
         self.kitchen_visible_l2 = False
@@ -602,25 +484,38 @@ class Ui_Widget(object):
         self.study_room_visible_l1 = False
         self.study_room_visible_l2 = False
 
-
         self.wc_visible = False
+
+        self.tt_bt0_living = False
+        self.tt_bt1_living = False
+
+        self.tt_bt0_bed = False
+        self.tt_bt1_bed = False
+
+        self.tt_bt0_kitchen = False
+        self.tt_bt1_kitchen = False
+
+        self.tt_bt0_study = False
+        self.tt_bt1_study = False
+
+        self.tt_bt0_wc = False
+
         self.flag = 0
         self.sw_0.clicked.connect(self.check_bt_0)
         self.sw_1.clicked.connect(self.check_bt_1)
-        self.living_room.clicked.connect(lambda: setattr(self, 'flag', 1))
-        self.bed_room.clicked.connect(lambda: setattr(self, 'flag', 2))
-        self.kitchen.clicked.connect(lambda: setattr(self, 'flag', 3))
-        self.wc.clicked.connect(lambda: setattr(self, 'flag', 4))
-        self.study_room.clicked.connect(lambda: setattr(self, 'flag', 5))
+        self.living_room.clicked.connect(self.on_living_room_click)
+        self.bed_room.clicked.connect(self.on_bed_room_click)
+        self.kitchen.clicked.connect(self.on_kitchen_click)
+        self.wc.clicked.connect(self.on_wc_click)
+        self.study_room.clicked.connect(self.on_study_room_click)
         self.Dimmer.valueChanged.connect(self.update_lcd)
-        #self.Dimmer.valueChanged.connect(self.updateSliderColor)
+        # self.Dimmer.valueChanged.connect(self.updateSliderColor)
         self.update_lcd(0)
         self.stream_thread = None
-        self.Dimmer.setMinimum(0)
-        self.Dimmer.setMaximum(100)
-        self.Dimmer.valueChanged.connect(self.check_dimmer)
+
         # Kết nối sự kiện nút nhấn để bắt đầu phát video
-        #self.cam_0.clicked.connect(self.start_stream)
+        # self.cam_0.clicked.connect(self.start_stream)
+
     # setupUi
 
     def retranslateUi(self, Widget):
@@ -651,187 +546,136 @@ class Ui_Widget(object):
         self.cam_4.setText("")
         self.cam_5.setText("")
         self.groupBox_5.setTitle(QCoreApplication.translate("Widget", u"GroupBox", None))
+
     # retranslateUi
 
-    def toggle_living_room_l1 (self):
+    def toggle_living_room_l1(self):
         self.living_visible_l1 = not self.living_visible_l1
         if self.living_visible_l1:
             self.label_living_l1.show()
             self.set_red_style_l1()
+            self.tt_bt0_living = True
         else:
             self.label_living_l1.hide()
             self.set_green_style_l1()
-    def toggle_living_room_l2 (self):
+            self.tt_bt0_living = False
+
+    def toggle_living_room_l2(self):
         self.living_visible_l2 = not self.living_visible_l2
         if self.living_visible_l2:
             self.label_living_l2.show()
             self.set_red_style_l2()
+            self.tt_bt1_living = True
         else:
             self.label_living_l2.hide()
             self.set_green_style_l2()
-    def toggle_bed_room_l1 (self):
+            self.tt_bt1_living = False
+
+    def toggle_bed_room_l1(self):
         self.bed_visible_l1 = not self.bed_visible_l1
         if self.bed_visible_l1:
             self.label_bed_l1.show()
             self.set_red_style_l1()
+            self.tt_bt0_bed = True
         else:
             self.label_bed_l1.hide()
             self.set_green_style_l1()
-    def toggle_bed_room_l2 (self):
+            self.tt_bt0_bed = False
+
+    def toggle_bed_room_l2(self):
         self.bed_visible_l2 = not self.bed_visible_l2
         if self.bed_visible_l2:
             self.label_bed_l2.show()
             self.set_red_style_l2()
+            self.tt_bt1_bed = True
         else:
             self.label_bed_l2.hide()
             self.set_green_style_l2()
-    def toggle_kitchen_l1 (self):
+            self.tt_bt1_bed = False
+
+    def toggle_kitchen_l1(self):
         self.kitchen_visible_l1 = not self.kitchen_visible_l1
         if self.kitchen_visible_l1:
             self.label_kitchen_l1.show()
             self.set_red_style_l1()
+            self.tt_bt0_kitchen = True
         else:
             self.label_kitchen_l1.hide()
             self.set_green_style_l1()
-    def toggle_kitchen_l2 (self):
+            self.tt_bt0_kitchen = False
+
+    def toggle_kitchen_l2(self):
         self.kitchen_visible_l2 = not self.kitchen_visible_l2
         if self.kitchen_visible_l2:
             self.label_kitchen_l2.show()
             self.set_red_style_l2()
+            self.tt_bt1_kitchen = True
         else:
             self.label_kitchen_l2.hide()
             self.set_green_style_l2()
-    def toggle_study_room_l1 (self):
+            self.tt_bt1_kitchen = False
+
+    def toggle_study_room_l1(self):
         self.study_room_visible_l1 = not self.study_room_visible_l1
         if self.study_room_visible_l1:
             self.label_study_room_l1.show()
             self.set_red_style_l1()
+            self.tt_bt0_study = True
         else:
             self.label_study_room_l1.hide()
             self.set_green_style_l1()
-    def toggle_study_room_l2 (self):
+            self.tt_bt0_study = False
+
+    def toggle_study_room_l2(self):
         self.study_room_visible_l2 = not self.study_room_visible_l2
         if self.study_room_visible_l2:
             self.label_study_room_l2.show()
             self.set_red_style_l2()
+            self.tt_bt1_study = True
         else:
             self.label_study_room_l2.hide()
             self.set_green_style_l2()
-    def toggle_wc (self):
+            self.tt_bt1_study = False
+
+    def toggle_wc(self):
         self.wc_visible = not self.wc_visible
         if self.wc_visible:
             self.label_wc.show()
             self.set_red_style_l1()
+            self.tt_bt0_wc = True
         else:
             self.label_wc.hide()
             self.set_green_style_l1()
-    def led_living(self):
-        if (self.Dimmer.value() ==0):
-            self.label_led_living1.hide()
-            self.label_led_living2.hide()
-            self.label_led_living3.hide()
-        if (1<=self.Dimmer.value() <=50):
-            self.label_led_living1.show()
-            self.label_led_living2.hide()
-            self.label_led_living3.hide()
-        if (70>=self.Dimmer.value() >50):
-            self.label_led_living1.hide()
-            self.label_led_living2.show()
-            self.label_led_living3.hide()
-        if (100>=self.Dimmer.value() >70):
-            self.label_led_living1.hide()
-            self.label_led_living2.hide()
-            self.label_led_living3.show()
-        
-    def led_kitchen(self):
-        if (self.Dimmer.value() ==0):
-            self.label_led_kitchen1.hide()
-            self.label_led_kitchen2.hide()
-            self.label_led_kitchen3.hide()
-        if (1<=self.Dimmer.value() <=50):
-            self.label_led_kitchen1.show()
-            self.label_led_kitchen2.hide()
-            self.label_led_kitchen3.hide()
-        if (70>=self.Dimmer.value() >50):
-            self.label_led_kitchen1.hide()
-            self.label_led_kitchen2.show()
-            self.label_led_kitchen3.hide()
-        if (100>=self.Dimmer.value() >70):
-            self.label_led_kitchen1.hide()
-            self.label_led_kitchen2.hide()
-            self.label_led_kitchen3.show()
-    def led_bed1(self):
-        if (self.Dimmer.value() ==0):
-            self.label_led_bed1_1.hide()
-            self.label_led_bed1_2.hide()
-            self.label_led_bed1_3.hide()
-        if (1<=self.Dimmer.value() <=50):
-            self.label_led_bed1_1.show()
-            self.label_led_bed1_2.hide()
-            self.label_led_bed1_3.hide()
-        if (70>=self.Dimmer.value() >50):
-            self.label_led_bed1_1.hide()
-            self.label_led_bed1_2.show()
-            self.label_led_bed1_3.hide()
-        if (100>=self.Dimmer.value() >70):
-            self.label_led_bed1_1.hide()
-            self.label_led_bed1_2.hide()
-            self.label_led_bed1_3.show()
-    def led_bed2(self):
-        if (self.Dimmer.value() ==0):
-            self.label_led_bed2_1.hide()
-            self.label_led_bed2_2.hide()
-            self.label_led_bed2_3.hide()
-        if (1<=self.Dimmer.value() <=50):
-            self.label_led_bed2_1.show()
-            self.label_led_bed2_2.hide()
-            self.label_led_bed2_3.hide()
-        if (70>=self.Dimmer.value() >50):
-            self.label_led_bed2_1.hide()
-            self.label_led_bed2_2.show()
-            self.label_led_bed2_3.hide()
-        if (100>=self.Dimmer.value() >70):
-            self.label_led_bed2_1.hide()
-            self.label_led_bed2_2.hide()
-            self.label_led_bed2_3.show()
+            self.tt_bt0_wc = False
+
     # def flag_livingroom (self):
     #     self.flag = 1
     def check_bt_0(self):
-        if(self.flag == 1):
+        if (self.flag == 1):
             self.toggle_living_room_l1()
-        if(self.flag == 2):
+        if (self.flag == 2):
             self.toggle_bed_room_l1()
-        if(self.flag == 3):
+        if (self.flag == 3):
             self.toggle_kitchen_l1()
-        if(self.flag == 4):
+        if (self.flag == 4):
             self.toggle_wc()
         if (self.flag == 5):
             self.toggle_study_room_l1()
 
     def check_bt_1(self):
-        if(self.flag == 1):
+        if (self.flag == 1):
             self.toggle_living_room_l2()
-        if(self.flag == 2):
+        if (self.flag == 2):
             self.toggle_bed_room_l2()
-        if(self.flag == 3):
+        if (self.flag == 3):
             self.toggle_kitchen_l2()
-        if(self.flag == 4):
-            self.toggle_wc()
-        if(self.flag == 5):
+        # if(self.flag == 4):
+        #     self.toggle_wc()
+        if (self.flag == 5):
             self.toggle_study_room_l2()
-            
-    def check_dimmer(self):
-        if(self.flag==1):
-            self.led_living()
-        if(self.flag==2):
-            self.led_bed1()
-        if(self.flag==3):
-            self.led_kitchen()
-        if(self.flag==5):
-            self.led_bed2()
-            
+
     def update_lcd(self, value):
-        brightness_levels = [0,25,50,75,100]
+        brightness_levels = [0, 25, 50, 75, 100]
         percentage = brightness_levels[value]
         self.lcd_2.display(percentage)
 
@@ -909,8 +753,8 @@ class Ui_Widget(object):
         """)
 
     def set_green_style_l2(self):
-            """Thiết lập stylesheet cho màu xanh lục"""
-            self.sw_1.setStyleSheet("""
+        """Thiết lập stylesheet cho màu xanh lục"""
+        self.sw_1.setStyleSheet("""
                 QPushButton {
                     border: none;
                     border-radius: 50px;
@@ -927,8 +771,8 @@ class Ui_Widget(object):
             """)
 
     def set_red_style_l2(self):
-            """Thiết lập stylesheet cho màu đỏ"""
-            self.sw_1.setStyleSheet("""
+        """Thiết lập stylesheet cho màu đỏ"""
+        self.sw_1.setStyleSheet("""
                 QPushButton {
                     border: none;
                     border-radius: 50px;
@@ -944,4 +788,57 @@ class Ui_Widget(object):
                 }
             """)
 
+    def on_living_room_click(self):
+        self.flag = 1
+        if self.tt_bt0_living:
+            self.set_red_style_l1()
+        else:
+            self.set_green_style_l1()
+        if self.tt_bt1_living:
+            self.set_red_style_l2()
+        else:
+            self.set_green_style_l2()
 
+    def on_bed_room_click(self):
+        self.flag = 2
+        if self.tt_bt0_bed:
+            self.set_red_style_l1()
+        else:
+            self.set_green_style_l1()
+        if self.tt_bt1_bed:
+            self.set_red_style_l2()
+        else:
+            self.set_green_style_l2()
+
+    def on_kitchen_click(self):
+        self.flag = 3
+        if self.tt_bt0_kitchen:
+            self.set_red_style_l1()
+        else:
+            self.set_green_style_l1()
+        if self.tt_bt1_kitchen:
+            self.set_red_style_l2()
+        else:
+            self.set_green_style_l2()
+
+    def on_wc_click(self):
+        self.flag = 4
+        if self.tt_bt0_wc:
+            self.set_red_style_l1()
+        else:
+            self.set_green_style_l1()
+        if self.tt_bt1_wc:
+            self.set_red_style_l2()
+        else:
+            self.set_green_style_l2()
+
+    def on_study_room_click(self):
+        self.flag = 5
+        if self.tt_bt0_study:
+            self.set_red_style_l1()
+        else:
+            self.set_green_style_l1()
+        if self.tt_bt1_study:
+            self.set_red_style_l2()
+        else:
+            self.set_green_style_l2()
